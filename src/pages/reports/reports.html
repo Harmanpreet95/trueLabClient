@@ -1,0 +1,54 @@
+<ion-header no-border>
+  <ion-navbar color="skyblue">
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Reports</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="reports_doc" >
+ <ion-card *ngFor="let hero of this.resp">
+  <ion-card-content *ngIf = "hero.PatientTest.reportpdf != null">
+   <h3 class="reports_heading">{{hero.Test.test}}</h3>
+   <p>{{hero.PatientTest.reportday}} {{hero.PatientTest.reporttime}}</p>
+    <!--<img *ngIf = "this.appclientdownloadreport == 0" class="img_pdf" (click) = "launch(hero.PatientTest.reportpdf,hero.PatientTest.id)" src="assets/img/pdf.png">
+     <img  *ngIf = "this.appclientdownloadreport == 1" class="img_pdf"  src="assets/img/pdficon.png">-->
+     <img *ngIf = "hero.PatientTest.appclientdownloadreport == 0" class="img_pdf" (click) = "launch(hero.PatientTest.reportpdf,hero.PatientTest.id)" src="assets/img/pdf.png">
+     <img  *ngIf = "hero.PatientTest.appclientdownloadreport == 1" class="img_pdf" (click) = "launch(hero.PatientTest.reportpdf,hero.PatientTest.id)" src="assets/img/pdficon.png">
+  </ion-card-content>
+</ion-card>
+<!--
+<ion-card>
+  <ion-card-content>
+   <h3 class="reports_heading">17 Apr 2017  5:30PM</h3>
+   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+     Lorem Ipsum has been the industry's 
+     standard Lorem Ipsum is simply dummy text of ting indust dummy text of .</p>
+    
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-content>
+   <h3 class="reports_heading">17 Apr 2017  5:30PM</h3>
+   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+     Lorem Ipsum has been the industry's 
+     standard Lorem Ipsum is simply dummy text of ting indust dummy text of .</p>
+    
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-content>
+   <h3 class="reports_heading">17 Apr 2017  5:30PM</h3>
+   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+     Lorem Ipsum has been the industry's 
+     standard Lorem Ipsum is simply dummy text of ting indust dummy text of .</p>
+    
+  </ion-card-content>
+</ion-card>-->
+
+
+</ion-content>

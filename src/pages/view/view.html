@@ -1,0 +1,60 @@
+<!--<ion-header no-border>
+  <ion-navbar color="skyblue">
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>View</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="view_doc">
+ <ion-card>
+  <ion-card-content>
+    <p><strong> Patients Name :</strong> {{views.name}}</p>
+    <p><strong>Address :</strong></p>
+    <p>{{views.address}}</p>
+    <p><strong>Phone Number :</strong>{{views.phonenumber}}</p>
+    <!--<p><strong>Insurance Name :</strong></p>
+    <p><strong>Insurance Number :</strong>65002</p>-->
+    <!--<p><strong>Doctor's Name :</strong>{{views.doctorname}}</p>
+    <p><strong>Doctor’s Number :</strong>{{views.doctornumber}}</p>
+    <p><strong>Doctor’s Fax Number :</strong>{{views.doctorfaxnumber}}</p>
+    <!--<p><strong>NPI Number :</strong> 0001111021</p>-->
+    <!--<p><strong>Diagnosis. Date of Service :</strong> {{views.created_date}}</p>-->
+    <!--<ion-item no-padding>
+      <ion-checkbox no-margin item-right color="skyblue" checked="true">{{views.fasting}}</ion-checkbox>
+      <ion-label>Fasting :</ion-label>
+    </ion-item>-->
+
+  <!--</ion-card-content>
+</ion-card>-->
+
+<!--<ion-fab left bottom>
+<button mini ion-fab color="skyblue"  *ngIf=" this.Bitid == 2 " (click)="patientDelete(views.id)"><ion-icon name="trash"></ion-icon></button>
+</ion-fab>
+<ion-fab right bottom>
+<button mini ion-fab color="skyblue" *ngIf=" this.Bitid == 2 " (click)="patientedit(views.id)"><ion-icon name="md-create"></ion-icon></button>
+</ion-fab>-->
+<!--</ion-content>-->
+
+
+
+
+<ion-card style="position: absolute;top:30vh;">
+  <ion-card-header style="background:#52bed9; color:#fff; ">
+    <span style="float: left;">View</span>
+     <button style="float: right; background: transparent;" (click)="dismiss()">
+            <ion-icon style="background: transparent;" class="customIcon" name="close"></ion-icon>
+        </button>
+  </ion-card-header>
+
+    
+ <ion-card-content style="padding: 40px 16px;">
+    <p><ion-icon style="background: transparent;" class="customIcon" name=""></ion-icon> Date:{{ Date }}</p>
+    <p><ion-icon style="background: transparent;" class="customIcon" name=""></ion-icon>Time: {{ time }}</p>
+    <p><ion-icon style="background: transparent;" class="customIcon" name=""></ion-icon>By: {{ doctorname}}</p>
+  </ion-card-content>
+
+ 
+</ion-card>
+

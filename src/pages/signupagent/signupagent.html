@@ -1,0 +1,322 @@
+<ion-header hidden>
+  <ion-navbar color="skyblue">
+    <button swipeBackEnabled="false" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <!--[hidden]="submitted"-->
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm" novalidate>
+      <div class="logotop2">
+        <img width="120px" src="assets/img/logo.png">
+      </div>
+      <ion-list>
+
+        <!-- <ion-item no-padding>
+     <ion-label color="primary" floating>Agency Name</ion-label>
+     <ion-label class="alert alert-danger" color="danger">
+     <div *ngIf="fname.errors && (fname.dirty || fname.touched)">
+       <div [hidden]="!fname.errors.required">
+         Field is required
+        </div>
+        <div [hidden]="!fname.errors.pattern">
+         Only text is allowed
+        </div>
+     </div>
+    </ion-label>
+  <ion-input  [(ngModel)]="data.fname" name="fname" type="text" pattern="[a-zA-Z ]+"  id="fname" required   #fname="ngModel"></ion-input>
+    </ion-item>
+  
+   <ion-item no-padding>
+     <ion-label color="primary" floating>Last name</ion-label>
+     <ion-label class="alert alert-danger" color="danger">
+        <div *ngIf="lname.errors && (lname.dirty || lname.touched)">
+          <div [hidden]="!lname.errors.required">
+            Field is required
+            </div>
+            <div [hidden]="!lname.errors.pattern">
+            Only text is allowed
+            </div>
+        </div>
+     </ion-label>
+    <ion-input  [(ngModel)]="data.lname" name="lname" type="text" id="lname"  pattern="[a-zA-Z ]+" required   #lname="ngModel"></ion-input>
+</ion-item>-->
+
+        <!--<ion-item no-padding>
+
+          <ion-label color="primary" floating>Your Email</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="username.errors && (username.dirty || username.touched)">
+              <div [hidden]="!username.errors.required">
+                Field is required
+              </div>
+              <div [hidden]="!username.errors.pattern">
+                In-valid Email
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.username" name="username" type="email" id="username" required pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$'
+            #username="ngModel"></ion-input>
+        </ion-item>-->
+
+
+
+
+        <ion-item no-padding class="docpage">
+          <ion-label color="primary" floating>Agency name</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="agencyname.errors && (agencyname.dirty || agencyname.touched)">
+              <div [hidden]="!agencyname.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.agencyname" name="agencyname" type="text" id="agencyname" #agencyname="ngModel" required></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+
+          <ion-label color="primary" floating>Agency Email</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="email.errors && (email.dirty || email.touched)">
+              <div [hidden]="!email.errors.required">
+                Field is required
+              </div>
+              <div [hidden]="!email.errors.pattern">
+                In-valid Email
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.email" name="email" type="email" id="email" required pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$'
+            #email="ngModel"></ion-input>
+        </ion-item>
+
+                <ion-item no-padding>
+          <ion-label color="primary" floating>Password</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="password.errors && (password.dirty || password.touched)">
+              <div [hidden]="!password.errors.required">
+                Field is required
+              </div>
+            </div>
+            <div *ngIf="password.errors && (password.dirty || password.touched)">
+              <div [hidden]="!password.errors.minlength">
+                Password Minlength 6 Character
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.password" name="password" type="password" id="password" minlength="6" required #password="ngModel"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+          <ion-label color="primary" floating>Confirm Password</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="cpassword.errors && (cpassword.dirty || cpassword.touched)">
+              <div [hidden]="!cpassword.errors.required">
+                Field is required
+              </div>
+            </div>
+            <div *ngIf="cpassword.errors && (cpassword.dirty || cpassword.touched)">
+              <div [hidden]="!cpassword.errors.minlength">
+                Password Minlength 6 Character
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.cpassword" name="cpassword" type="password" id="cpassword" minlength="6" required #cpassword="ngModel"></ion-input>
+        </ion-item>
+
+
+
+        <ion-item no-padding>
+          <ion-label color="primary" floating>Agency Phone</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+
+            <div *ngIf="agencyphone.errors && (agencyphone.dirty || agencyphone.touched)">
+              <div [hidden]="!agencyphone.errors.required">
+                Field is required
+              </div>
+              <!--<div [hidden]="!phone.errors.valid" >
+         Invalid Format
+        </div>-->
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.agencyphone" name="agencyphone" type="number" id="agencyphone" #agencyphone="ngModel" required></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+          <ion-label color="primary" floating>Agency Fax</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+
+            <div *ngIf="Agencyfax.errors && (Agencyfax.dirty || Agencyfax.touched)">
+              <div [hidden]="!Agencyfax.errors.required">
+                Field is required
+              </div>
+              </div>
+         </ion-label>
+          <ion-input [(ngModel)]="data.Agencyfax" name="Agencyfax" type="number" id="Agencyfax" #Agencyfax="ngModel"></ion-input>
+        </ion-item>
+        <!--<ion-label>
+    <div *ngIf="fax.errors && (fax.dirty || fax.touched)" class="alert alert-danger">
+       <div [hidden]="!fax.errors.required" class="alert alert-danger">
+         Fax is required
+        </div>
+    </div>
+    </ion-label>-->
+
+
+
+        <ion-item no-padding>
+
+          <ion-label color="primary" floating>Address</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="address.errors && (address.dirty || address.touched)">
+              <div [hidden]="!address.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.address" name="address" type="text" id="address" required #address="ngModel"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+
+
+          <ion-label color="primary" floating>Address 2</ion-label>
+          <!--<ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="address2.errors && (address2.dirty || address2.touched)">
+              <div [hidden]="!address2.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>-->
+          <ion-input [(ngModel)]="data.address2" name="address2" type="text" id="address2" #address2="ngModel"></ion-input>
+        </ion-item>
+
+       
+        <!--<ion-item no-padding>
+          <ion-label color="primary" floating>Doctor Phone</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="Doctorphone.errors && (Doctorphone.dirty || Doctorphone.touched)">
+              <div [hidden]="!Doctorphone.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.Doctorphone" name="Doctorphone" type="number" id="Doctorphone" #Doctorphone="ngModel" required></ion-input>
+        </ion-item>-->
+
+        <!--<ion-item no-padding>
+     <ion-label color="primary" floating>Doctor Npi</ion-label>-->
+        <!--<ion-label  class="alert alert-danger" color="danger">
+    <div *ngIf="doctornpi.errors && (doctornpi.dirty || doctornpi.touched)">
+       <div [hidden]="!doctornpi.errors.required" >
+         Field is required
+        </div>
+    </div>
+    </ion-label>-->
+        <!--<ion-input  [(ngModel)]="data.doctornpi" name="doctornpi" type="text"  id="doctornpi" #doctornpi="ngModel"></ion-input>
+    </ion-item>-->
+
+        <ion-item no-padding>
+
+          <ion-label color="primary" floating>City</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="city.errors && (city.dirty || city.touched)">
+              <div [hidden]="!city.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.city" name="city" type="text" id="city" required #city="ngModel"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+          <ion-label color="primary" floating>State</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="state.errors && (state.dirty || state.touched)">
+              <div [hidden]="!state.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.state" name="state" type="text" id="state" required #state="ngModel"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+          <ion-label color="primary" floating>Zipcode</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="zipcode.errors && (zipcode.dirty || zipcode.touched)">
+              <div [hidden]="!zipcode.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.zipcode" name="zipcode" type="text" id="zipcode" required #zipcode="ngModel"></ion-input>
+        </ion-item>
+
+ <!--<ion-item no-padding>
+          <ion-label color="primary" floating>Doctor name</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="Docname.errors && (Docname.dirty || Docname.touched)">
+              <div [hidden]="!Docname.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.Docname" name="Docname" type="text" id="Docname" #Docname="ngModel" required></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+          <ion-label color="primary" floating>Number</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="Number.errors && (Number.dirty || Number.touched)">
+              <div [hidden]="!Number.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.Number" name="Number" type="text" id="Docname" #Number="ngModel" required></ion-input>
+        </ion-item>
+
+
+         <ion-item no-padding>
+          <ion-label color="primary" floating>Doctor NPI Number</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="npi.errors && (npi.dirty || npi.touched)">
+              <div [hidden]="!npi.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.npi" name="npi" type="text" id="Docname" #npi="ngModel" required></ion-input>
+        </ion-item>
+
+
+         <ion-item no-padding>
+          <ion-label color="primary" floating>Doctor Fax Number</ion-label>
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="fax.errors && (fax.dirty || fax.touched)">
+              <div [hidden]="!fax.errors.required">
+                Field is required
+              </div>
+            </div>
+          </ion-label>
+          <ion-input [(ngModel)]="data.fax" name="fax" type="text" id="Docname" #fax="ngModel" required></ion-input>
+        </ion-item>-->
+
+        <div class="specer" style="height:3vh;"></div>
+        <!--<button  ion-button full color ="skyblue" type="submit" [disabled]="!signupForm.form.valid" (click)="register(signupForm)">SIGNUP</button>-->
+        <button ion-button full color="skyblue" type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid" (click)="register(heroForm)">Submit</button>
+
+        <div class="specer" style="height:3vh;"></div>
+        <p style="text-align:center; font-size:13px;">Already have an account ? <a style="color:#52bed9;" (click)="signin()"> Sign In</a></p>
+      </ion-list>
+      <div class="specer" style="height:3vh;"></div>
+      <!--<button text-center full ion-button color="dark" clear>Skip</button>-->
+    </form>
+  </div>
+</ion-content>

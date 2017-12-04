@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "775287115574",
+    "firebase_url": "https://labclient-339ab.firebaseio.com",
+    "project_id": "labclient-339ab",
+    "storage_bucket": "labclient-339ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775287115574:android:7ef9559ba603463d",
+        "android_client_info": {
+          "package_name": "io.ionic.startertruelab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775287115574-u4v02rul3pg3he0tnqk9ovevfovu0q6o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeGooy0-Jvi4pjAaqbPn4TCoR7uAEshTI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

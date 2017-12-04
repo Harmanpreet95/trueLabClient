@@ -1,0 +1,58 @@
+<ion-header hidden>
+  <ion-navbar color="skyblue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+  <div class="logotop">
+    <img width="120px" src="assets/img/logo.png">
+  </div>
+  <ion-list>
+
+  <ion-item no-padding>
+    
+    <ion-label color="primary" floating>Email</ion-label>
+    <ion-label class="alert alert-danger" color="danger">
+     <div *ngIf="email.errors && (email.dirty || email.touched)" >
+       <div [hidden]="!email.errors.required" >
+         Email is required
+        </div>
+        <div [hidden]="!email.errors.pattern" >
+         In-valid Email
+        </div>
+     </div>
+    </ion-label>
+    <ion-input [(ngModel)]="data.email"  name="email" type="email"  id="email" required pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$'  #email="ngModel"></ion-input>
+    </ion-item>
+  
+
+  <ion-item no-padding>
+    <ion-label color="primary" floating>Password</ion-label>
+    <ion-label class="alert alert-danger" color="danger">
+    <div *ngIf="password.errors && (password.dirty || password.touched)">
+       <div [hidden]="!password.errors.required" >
+         Password is required
+        </div>
+    </div>
+    </ion-label>
+     <ion-input  [(ngModel)]="data.password" name="password" type="password"  id="password" required   #password="ngModel"></ion-input>
+    </ion-item>
+  
+
+<div class="specer" style="height:3vh;"></div>
+  <button ion-button full color="skyblue" type="submit"[disabled]="!loginForm.form.valid">LOGIN</button>
+<div class="specer" style="height:3vh;"></div>
+
+<a style="color:#52bed9; font-size:13px; text-align:center; width:100%; display:block;" (click)="forget()"> Forgot Password</a>
+<p style="text-align:center; font-size:13px;">Don't have an account ? <a style="color:#52bed9;" (click)="rolePage()"> Sign Up</a></p>
+</ion-list>
+<div class="specer" style="height:3vh;"></div>
+<!--<button text-center full ion-button color="dark"  clear>Skip</button>-->
+  </form>
+</ion-content>
+

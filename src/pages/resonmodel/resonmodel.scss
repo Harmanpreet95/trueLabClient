@@ -1,0 +1,32 @@
+page-resonmodel{
+    .item-inner{
+        padding-right:0 !important;
+    }
+    .item-ios{
+        font-size: 14px;
+    }
+    .list-ios > .item-block:first-child {
+	border-top: none;
+    }
+
+
+}
+page-resonmodel > ion-modal {
+	padding: 15%;
+	background: rgba(0,0,0,0.5);
+}
+
+
+// ion-model{
+//     background: rgba(0,0,0,0.8);
+// }
+
+
+// .show-page{
+//     z-index: 10001;height: 175px;top: 200px;width: 85%;display: table;margin: auto;position: absolute;left: 0;right: 0;border: 1px solid #f2f2f2;z-index: 99999+9;
+// }
+// .ion-page > ion-content {
+//     position: absolute;
+//     min-height: 173px;
+//     top: 0;
+// }

@@ -1,0 +1,48 @@
+.testlist_doc{
+    ion-item{
+        border-bottom:1px solid skyblue; 
+    }
+    [col-4],.sign{
+  font-weight: bold;
+  text-transform: capitalize;
+      color: #2d2d2d;
+}
+
+.top_head{background: #52bed9;padding: 7px;}
+.top_cnt{color:#fff;}
+
+.box01.row {
+    margin-top: 10px;
+}
+
+}
+[col-6] {
+  
+  
+    max-width: 45%;
+}
+
+.dates{
+    border: 1px solid #9e9797;
+}
+
+.dates .text-input-md,.dates .text-input-ios{margin: 0;}
+
+page-testlist {
+  .drawing-active {
+    background: #d6fffc;
+  }
+  .title {
+    //text-align: center;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+}
+.menumain button{
+      color: #fff;
+    background-color: #3fb1ce;
+}
+.mainmenu{
+  background-color: #3fb1ce;
+}

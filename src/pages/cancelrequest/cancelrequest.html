@@ -1,0 +1,54 @@
+<ion-header no-border>
+  <ion-toolbar color="skyblue">
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cancel Request</ion-title>
+    <!--<ion-buttons ion-button end  ng-reflect-klass="back-button">-->
+     <!--<ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="setFilteredItems()" (ionCancel)="onCancel()"></ion-searchbar>-->
+    <!--</ion-buttons> -->
+</ion-toolbar>
+<ion-toolbar>
+    <!--<ion-buttons ion-button end  ng-reflect-klass="back-button">-->
+     <ion-searchbar [(ngModel)]="name" [showCancelButton]="shouldShowCancel" (ionInput)="setFilteredItems()" (ionCancel)="onCancel()"></ion-searchbar>
+    <!--</ion-buttons> -->
+ </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="list_doc">
+  <ion-list >
+    <ion-item *ngIf="errorValue == 2">
+    <ion-item *ngFor="let hero of this.resp">
+       <h2>{{hero.Patient.trackingid}}</h2>
+       <p ><ion-icon name="time"></ion-icon>{{hero.Patient.created}}</p>
+      <ion-icon item-right padding-left (click)="showAlert(hero.StatusCancel.admin_reason)"><img class="picimg" width="20px" src="assets/img/que.png"></ion-icon>
+    </ion-item>
+    </ion-item>
+     <ion-item *ngIf="errorValue == 0">
+    <ion-item *ngFor="let hero of this.searchlist">
+       <h2>{{hero.Patient.trackingid}}</h2>
+       <p ><ion-icon name="time"></ion-icon>{{hero.Patient.created}} </p>
+      <ion-icon item-right padding-left (click)="showAlert(hero.StatusCancel.admin_reason)"><img class="picimg" width="20px" src="assets/img/que.png"></ion-icon>
+    </ion-item>
+     </ion-item>
+    <!--<ion-item>
+       <h2>Patients 2</h2>
+       <p ><ion-icon name="time"></ion-icon>17 Apr 2017 11:20am </p>
+      <ion-icon item-right padding-left><img width="20px" src="assets/img/que.png"></ion-icon>
+    </ion-item>
+    <ion-item>
+       <h2>Patients 3</h2>
+       <p ><ion-icon name="time"></ion-icon>17 Apr 2017 11:20am </p>
+      <ion-icon item-right padding-left><img width="20px" src="assets/img/que.png"></ion-icon>
+    </ion-item>
+    <ion-item>
+       <h2>Patients 4</h2>
+       <p ><ion-icon name="time"></ion-icon>17 Apr 2017 11:20am </p>
+      <ion-icon item-right padding-left><img width="20px" src="assets/img/que.png"></ion-icon>
+    </ion-item>-->
+</ion-list>
+<!--<ion-fab right bottom>
+<button mini ion-fab color="skyblue" (click)="detailsmodelPage()"><ion-icon name="add"></ion-icon></button>
+</ion-fab>-->
+</ion-content>

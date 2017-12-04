@@ -1,0 +1,36 @@
+
+
+<ion-card style="position: absolute;top:30vh;">
+  <ion-card-header style="background:#52bed9; color:#fff; ">
+    <span style="float: left;">Test</span>
+     <button style="float: right; background: transparent;" (click)="dismiss()">
+            <ion-icon style="background: transparent;" class="customIcon" name="close"></ion-icon>
+        </button>
+  </ion-card-header>
+  
+  <ion-list>
+    <ion-row class="textpopup">
+      <ion-col col-4>Name</ion-col>
+      <ion-col col-4 text-center>Test Ordered</ion-col>
+      <ion-col col-4 text-center>Fasting</ion-col>
+    </ion-row>
+    <ion-row class="textpopup2">
+      <ion-col col-4>{{testname}}</ion-col>
+      <ion-col col-4 text-center>
+
+        <!--<ion-checkbox style="margin-right:0;"  name="check2" color="skyblue" [disabled]="true" checked="true" ></ion-checkbox>-->
+      <input type="checkbox" checked onclick="return false;" onkeydown="return false;"/>
+      </ion-col>
+      <ion-col col-4 text-center>
+
+          <input type="checkbox" *ngIf = "this.fasting == 1" onclick="return false;" onkeydown="return false;"  style="margin-right:0;" name="check"  color="skyblue" checked="true" readonly="true">
+        
+           <!--<input type="checkbox"  onclick="return false;" onkeydown="return false;" style="margin-right:0;"   checked="false">-->
+           <input type="checkbox" *ngIf = "this.fasting != 1" onclick="return false;" onkeydown="return false;"/>
+      </ion-col>
+    </ion-row>
+</ion-list>
+
+</ion-card>
+
+

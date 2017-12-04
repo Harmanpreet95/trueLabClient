@@ -1,0 +1,33 @@
+page-reports {
+    .reports_heading{
+        color: skyblue;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+    }
+    .card-content{
+    width: 100%;
+    position: relative;
+    float: left;
+    padding-right:78px;
+}
+.card-content h3{
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    font-weight: 500;
+}
+.card-content p{
+    width: 100%;
+    float: left;
+    margin: 9px 0 0;
+    font-size: 12px;
+}
+.img_pdf {
+    width: 50px;
+    position: absolute;
+    right: 12px;
+    top: 16px;
+}
+
+}
+

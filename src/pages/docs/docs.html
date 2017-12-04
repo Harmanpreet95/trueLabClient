@@ -1,0 +1,28 @@
+<ion-header no-border>
+  <ion-toolbar color="skyblue">
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Doctor List</ion-title>
+    <!--<button style="float: right; background: transparent; position:absolute; right:0px; top:20px; font-size:16px; color:#fff;" (click)="dismiss()">
+      <ion-icon style="background: transparent;" class="customIcon" name="close"></ion-icon>
+    </button>-->
+</ion-toolbar>
+</ion-header>
+
+<ion-content style="background-color:#fff;">
+ <ion-card-content style="padding:10px 16px;">
+   <ion-list *ngFor = "let list of this.docs" >
+  <button ion-item  (click)="doctorId(list.User.id)" *ngIf = "list.User.firstname != null">
+    {{list.User.firstname}}<ion-icon class="arrow" name="arrow-forward"></ion-icon>
+  </button>  
+</ion-list>
+ <!--<ion-list>
+  <button ion-item>
+    List2<ion-icon class="arrow" name="arrow-forward"></ion-icon>
+  </button>  
+</ion-list>-->
+  </ion-card-content>
+</ion-content>
+
+

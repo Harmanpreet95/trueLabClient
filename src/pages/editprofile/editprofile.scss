@@ -1,0 +1,26 @@
+page-editprofile {
+
+.user_pro {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #ccc;
+}
+.user_pro img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.item.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+    border-bottom-color: #52bed9;
+    box-shadow: inset 0 -1px 0 0 #52bed9;
+}
+}

@@ -1,0 +1,49 @@
+page-changepwd {
+
+
+  .pic {
+    text-align: center;
+    padding: 8vh 0;
+}
+
+.pic img {
+    width: 40vh;
+}
+
+.list-ios > .item-block:first-child {
+    border-top: 0px solid #c8c7cc;
+}
+
+.main_sec{
+
+        // .input{
+        //     font-size: 10px;
+        // }
+
+    
+
+}
+.item-md{
+    padding-left: 0px;
+}
+
+.alred a {color:#3fb1ce;}
+
+.alert.alert-danger {
+	    bottom: 9px;
+    font-size: 11px;
+    right: 0;
+    color: #dc1919;
+    position: absolute;
+    padding: 0 0 0 8px;
+}
+
+.item.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+    border-bottom-color: #52bed9;
+    box-shadow: inset 0 -1px 0 0 #52bed9;
+}
+.toolbar-title.toolbar-title-ios{
+
+    overflow: visible !important;
+}
+}

@@ -1,0 +1,70 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="skyblue">
+      <ion-list style="margin:0;">
+        <ion-item  no-border style="background:none; border:none; color:#fff;">
+          <ion-avatar item-left>
+            <img [src]="data.image">
+          </ion-avatar>
+          <h2 style="padding-top:10px;" *ngIf = "agencyName == 'null'" >{{data.firstname}}</h2>
+           <h2 style="padding-top:10px;" *ngIf = "agencyName != 'null'">{{data.agencyname}}</h2>
+          <!--<p style="color:#fff;">{{data.name}}</p>-->
+          <!--<button (click) = "nav.setRoot(pages2.editProfile)"><ion-icon class="md-person-add"></ion-icon></button>-->
+        </ion-item>
+      </ion-list>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="mainmenu">
+    <ion-list class="menumain">
+  
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.homePage)">
+    <ion-icon name="ios-home-outline"></ion-icon>
+    Home
+  </button>
+
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.schedulePage)">
+    <ion-icon name="ios-refresh-outline"></ion-icon>
+    Schedule Request
+  </button>
+
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.pendingrequestPage)">
+    <ion-icon name="ios-alert-outline"></ion-icon>
+    Pending Request
+  </button>
+
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.cancelrequestPage)">
+    <ion-icon name="ios-backspace-outline"></ion-icon>
+    Cancel Request
+  </button>
+
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.historyPage)">
+    <ion-icon name="ios-timer-outline"></ion-icon>
+    History
+  </button>
+  
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.editProfile)">
+    <ion-icon name="ios-person-outline"></ion-icon>
+    Edit Profile
+  </button>
+
+    <button menuClose ion-item icon-left [hidden]= "agencyName == 'null'" (click)="nav.setRoot(pages2.DocsPage)">
+    <ion-icon name="ios-person-outline"></ion-icon>
+   Doctor
+  </button>
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.ChangepwdPage)">
+    <ion-icon name="ios-log-out-outline"></ion-icon>
+    Change Password
+  </button>
+  <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.loginPage)">
+    <ion-icon name="ios-log-out-outline"></ion-icon>
+    Logout
+  </button>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

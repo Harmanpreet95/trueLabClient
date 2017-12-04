@@ -1,0 +1,31 @@
+page-docs{
+
+.label.label-md, .label.label-ios {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    position: relative;
+}
+.arrow{
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+    width: auto;
+    top: 7px;
+}
+.list-md ,.list-ios{
+    margin: -1px 0 16px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+}
+
+.list_doc{
+    p{
+        font-size: 10px;
+    }
+    h2{
+        color:skyblue;
+    }
+}

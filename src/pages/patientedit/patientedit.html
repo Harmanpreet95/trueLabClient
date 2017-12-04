@@ -1,0 +1,125 @@
+<ion-header no-border>
+  <ion-toolbar color="skyblue">
+    <button (click)="home()" class="btn22">Cancel</button>
+    <!--<ion-buttons ion-button start (click)="home()">
+      Cancel
+    </ion-buttons>-->
+    <ion-title>Patients Details</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content padding class="detailsmodel">
+<form (ngSubmit)="patientedit(detailmodel)" #detailmodel="ngForm" >
+    <ion-list>
+      <ion-item no-padding>
+        <ion-input no-padding  [(ngModel)]="data.name" name="name" type="text"  id="name" required   #name="ngModel" placeholder="Name"></ion-input>
+        </ion-item>
+        <ion-label>
+     <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+       <div [hidden]="!name.errors.required" class="alert alert-danger">
+         Name is required
+        </div>
+     </div>
+        </ion-label>
+      
+      <ion-item no-padding>
+        <ion-input no-padding [(ngModel)]="data.address" name="address" type="text"  id="address" required   #address="ngModel" placeholder="Address"></ion-input>
+        </ion-item>
+        <ion-label>
+     <div *ngIf="address.errors && (address.dirty || address.touched)" class="alert alert-danger">
+       <div  [hidden]="!address.errors.required" class="alert alert-danger">
+         Address is required
+        </div>
+     </div>
+        </ion-label>
+      
+      <ion-item no-padding>
+        <ion-input no-padding [(ngModel)]="data.phonenumber" name="phonenumber" type="number"  id="number" required   #phonenumber="ngModel" placeholder="Phone Number"></ion-input>
+        </ion-item>
+        <ion-label>
+    <div *ngIf="phonenumber.errors && (phonenumber.dirty || phonenumber.touched)" class="alert alert-danger">
+       <div [hidden]="!phonenumber.errors.required" class="alert alert-danger">
+         phone number is required
+        </div>
+        <div [hidden]="!phonenumber.errors.valid" class="alert alert-danger">
+         Invalid Format
+        </div>
+          
+    </div>
+    </ion-label>
+      
+      <ion-item no-padding>
+        <ion-input no-padding [(ngModel)]="data.dob" name="dob" type="date"  id="dob" required   #dob="ngModel" placeholder="DOB"></ion-input>
+        </ion-item>
+        <ion-label>
+    <div *ngIf="dob.errors && (dob.dirty || dob.touched)" class="alert alert-danger">
+       <div [hidden]="!dob.errors.required" class="alert alert-danger">
+         dob is required
+        </div>
+        <div [hidden]="!dob.errors.valid" class="alert alert-danger">
+         Invalid Format
+        </div>
+          
+    </div>
+    </ion-label>
+      
+      <ion-item no-padding>
+        <ion-input no-padding [(ngModel)]="data.doctorname" name="doctorname" type="text"  id="doctorsname" required   #doctorname="ngModel" placeholder="Doctors Name"></ion-input>
+        </ion-item>
+        <ion-label>
+    <div *ngIf="doctorname.errors && (doctorname.dirty || doctorname.touched)" class="alert alert-danger">
+       <div [hidden]="!doctorname.errors.required" class="alert alert-danger">
+         Doctor Name is required
+        </div>
+    </div>
+    </ion-label>
+      
+      <ion-item no-padding>
+        <ion-input no-padding [(ngModel)]="data.doctornumber" name="doctornumber" type="text"  id="doctornumber" required   #doctornumber="ngModel" placeholder="Doctors Number"></ion-input>
+        </ion-item>
+        <ion-label>
+    <div *ngIf="doctornumber.errors && (doctornumber.dirty || doctornumber.touched)" class="alert alert-danger">
+       <div [hidden]="!doctornumber.errors.required" class="alert alert-danger">
+         phone number is required
+        </div>
+        <div [hidden]="!doctornumber.errors.valid" class="alert alert-danger">
+         Invalid Format
+        </div>
+          
+    </div>
+    </ion-label>
+      
+      <ion-item no-padding>
+        <ion-input no-padding  [(ngModel)]="data.doctorfaxnumber" name="doctorfaxnumber" type="text"  id="doctorfaxnumber" required   #doctorfaxnumber="ngModel"placeholder="Doctors Fax Number"></ion-input>
+        </ion-item>
+        <ion-label>
+    <div *ngIf="doctorfaxnumber.errors && (doctorfaxnumber.dirty || doctorfaxnumber.touched)" class="alert alert-danger">
+       <div [hidden]="!doctorfaxnumber.errors.required" class="alert alert-danger">
+         Fax number is required
+        </div>
+    </div>
+    </ion-label>
+      <!--{{Fast}}-->
+    <!--<ion-item no-padding>-->
+        <!--<ion-checkbox *ngIf = "Fast == '1'" style="margin-right:0;" (ionChange)="datachange($event)" name="check"  item-right color="skyblue" checked="true" ></ion-checkbox>
+        <ion-checkbox *ngIf = "Fast != '1'" style="margin-right:0;" (ionChange)="datachange($event)"  name="check1"  item-right color="skyblue" ></ion-checkbox>-->
+       <!--<ion-checkbox [(ngModel)]="mymodel.checked" [name]="mymodel.name" [value]="mymodel.value" [checked]="mymodel.checked" ></ion-checkbox>-->
+       
+              <!--<ion-checkbox value= "selected" [checked]="selected"></ion-checkbox>
+      
+        <ion-label>Fasting :</ion-label>
+      </ion-item>-->
+    </ion-list>
+  <button type="submit"  ion-button full color="skyblue" (click) = "editPatientDetails(detailmodel)">SAVE</button>
+</form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar no-border>
+    
+  </ion-toolbar>
+</ion-footer>
